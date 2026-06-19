@@ -36,6 +36,7 @@ export default function Contact() {
     }
 
     try {
+      console.log(formData);
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbzaOshvH7Jx-cbR9S7zgPCsN6CMR1haFZdX4fXerr_pP8JB5z2A0BM6dQW8AhKcbtpc/exec",
         {
@@ -136,6 +137,10 @@ export default function Contact() {
                     type="email"
                     placeholder="Email Address"
                     required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none"
                   />
 
@@ -154,11 +159,14 @@ export default function Contact() {
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none"
                   />
 
-
                   <textarea
                     rows={6}
                     placeholder="Tell us about your project..."
                     required
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none"
                   />
 
@@ -195,7 +203,7 @@ export default function Contact() {
 
                   <p>
                     <span className="text-white font-semibold">Email:</span><br />
-                    iteinfosolutions@gmail.com
+                    itetechsolutions17@gmail.com
                   </p>
 
                   <p>
