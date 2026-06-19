@@ -34,17 +34,11 @@ export default function Contact() {
       alert("Please enter a valid 10-digit phone number.");
       return;
     }
-    
-    if (!formData.email.trim()) {
-      alert("Please enter email address.");
-      return;
-    }
 
     if (formData.message.trim().length < 10) {
       alert("Message must be at least 10 characters long.");
       return;
     }
-
 
     try {
       const response = await fetch(
