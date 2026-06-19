@@ -34,11 +34,9 @@ export default function Contact() {
       alert("Please enter a valid 10-digit phone number.");
       return;
     }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
-
-    if (!emailRegex.test(formData.email)) {
-      alert("Please enter a valid email address.");
+    
+    if (!formData.email.trim()) {
+      alert("Please enter email address.");
       return;
     }
 
