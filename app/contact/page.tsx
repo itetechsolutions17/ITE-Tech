@@ -2,8 +2,84 @@
 
 import { motion } from "framer-motion";
 import PageWrapper from "../../components/PageWrapper";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (formData.phone.length !== 10) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    if (formData.name.trim().length < 3) {
+      alert("Name must be at least 3 characters long.");
+      return;
+    }
+
+    if (!/^[A-Za-z\s]+$/.test(formData.name)) {
+      alert("Name should contain only letters.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i.test(
+        formData.email
+      )
+    ) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (formData.message.trim().length < 10) {
+      alert("Message must be at least 10 characters long.");
+      return;
+    }
+
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzaOshvH7Jx-cbR9S7zgPCsN6CMR1haFZdX4fXerr_pP8JB5z2A0BM6dQW8AhKcbtpc/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        alert("Message Sent Successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    }
+  };
+
   return (
     <PageWrapper>
 
@@ -56,12 +132,17 @@ export default function Contact() {
                   Send Message
                 </h2>
 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
 
                   <input
                     type="text"
                     placeholder="Full Name"
                     required
+                    value={formData.name}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+                      setFormData({ ...formData, name: value });
+                    }}
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none"
                   />
 
@@ -76,8 +157,17 @@ export default function Contact() {
                     type="tel"
                     placeholder="Phone Number"
                     required
+                    maxLength={10}
+                    value={formData.phone}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, "");
+                      if (value.length <= 10) {
+                        setFormData({ ...formData, phone: value });
+                      }
+                    }}
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none"
                   />
+
 
                   <textarea
                     rows={6}
@@ -171,4 +261,4 @@ export default function Contact() {
 
     </PageWrapper>
   );
-}
+} 
