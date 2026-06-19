@@ -61,7 +61,7 @@ export default function Contact() {
       }
     } catch (error) {
       console.error(error);
-      alert("Something went wrong.");
+      alert(JSON.stringify(error));
     }
   };
 
