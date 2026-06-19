@@ -49,18 +49,14 @@ export default function Contact() {
         }
       );
 
-      if (response.ok) {
-        alert("Message Sent Successfully!");
+      alert("Message Sent Successfully!");
 
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        alert("Failed to send message.");
-      }
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } catch (error) {
       console.error(error);
       alert(JSON.stringify(error));
