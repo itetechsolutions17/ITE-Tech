@@ -27,7 +27,9 @@ export default function Navbar() {
           <img
             src="projects/logo.png"
             alt="ITE Tech Solutions"
-            className="h-10 w-auto"
+            width={55}
+            height={55}
+            className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
           />
 
           <Link
@@ -45,16 +47,16 @@ export default function Navbar() {
               key={item.path}
               href={item.path}
               className={`group relative transition ${pathname === item.path
-                  ? "text-blue-400"
-                  : "text-gray-300 hover:text-blue-400"
+                ? "text-blue-400"
+                : "text-gray-300 hover:text-blue-400"
                 }`}
             >
               {item.name}
 
               <span
                 className={`absolute left-0 -bottom-1 h-[2px] bg-blue-400 transition-all duration-300 ${pathname === item.path
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
+                  ? "w-full"
+                  : "w-0 group-hover:w-full"
                   }`}
               />
             </Link>
@@ -89,8 +91,8 @@ export default function Navbar() {
                 href={item.path}
                 onClick={() => setIsOpen(false)}
                 className={`${pathname === item.path
-                    ? "text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
+                  ? "text-blue-400"
+                  : "text-gray-300 hover:text-blue-400"
                   }`}
               >
                 {item.name}
