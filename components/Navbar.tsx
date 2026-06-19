@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="/logo.png"
+            src="projects/logo.png"
             alt="ITE Tech Solutions"
             className="h-10 w-auto"
           />
