@@ -35,11 +35,9 @@ export default function Contact() {
       return;
     }
 
-    if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i.test(
-        formData.email
-      )
-    ) {
+    const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+
+    if (!emailRegex.test(formData.email)) {
       alert("Please enter a valid email address.");
       return;
     }
