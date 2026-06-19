@@ -40,6 +40,7 @@ export default function Contact() {
         "https://script.google.com/macros/s/AKfycbzaOshvH7Jx-cbR9S7zgPCsN6CMR1haFZdX4fXerr_pP8JB5z2A0BM6dQW8AhKcbtpc/exec",
         {
           method: "POST",
+          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
           },
