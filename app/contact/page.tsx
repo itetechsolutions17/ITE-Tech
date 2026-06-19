@@ -35,11 +35,6 @@ export default function Contact() {
       return;
     }
 
-    if (formData.message.trim().length < 10) {
-      alert("Message must be at least 10 characters long.");
-      return;
-    }
-
     try {
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbzaOshvH7Jx-cbR9S7zgPCsN6CMR1haFZdX4fXerr_pP8JB5z2A0BM6dQW8AhKcbtpc/exec",
