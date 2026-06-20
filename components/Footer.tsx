@@ -109,7 +109,7 @@ export default function Footer() {
       </p>
 
       <p className="text-sm text-slate-500">
-        Designed & Developed by ITE Tech Solutions 🚀
+        Designed & Developed by ITE Tech Solutions |
       </p>
     </div>
   </footer >
