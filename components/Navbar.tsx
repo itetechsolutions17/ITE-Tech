@@ -24,18 +24,18 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img
-            src="projects/logo.png"
-            alt="ITE Tech Solutions"
-            width={55}
-            height={55}
-            className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
-          />
-
           <Link
             href="/"
             className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
           >
+            <img
+              src="projects/logo.png"
+              alt="ITE Tech Solutions"
+              width={55}
+              height={55}
+              className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
+            />
+
             ITE Tech Solutions
           </Link>
         </div>

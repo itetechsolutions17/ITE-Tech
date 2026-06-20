@@ -226,6 +226,13 @@ export default function About() {
                     {item}
                   </h3>
 
+                  <p className="mt-3 text-gray-400 leading-7">
+                    {item === "Live Industry Projects" && "Hands-on experience with real-world projects."}
+                    {item === "Scalable Architecture" && "Building systems that grow with your business."}
+                    {item === "Modern Technologies" && "Utilizing the latest tools and frameworks."}
+                    {item === "Dedicated Support" && "Reliable assistance for all your technical needs."}
+                  </p>
+
                 </motion.div>
 
               ))}
@@ -237,12 +244,6 @@ export default function About() {
         </div>
 
       </section>
-
-
-          {/* FOOTER */}
-          <footer className="border-t border-white/10 text-center py-8 text-gray-500 bg-[#050b16]">
-            © 2026 Innovative Tech Engineers. All Rights Reserved.
-          </footer>
 
     </PageWrapper>
   );

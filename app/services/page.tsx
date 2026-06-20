@@ -185,12 +185,6 @@ export default function Services() {
           </motion.div>
 
         </section>
-
-        {/* FOOTER */}
-        <footer className="border-t border-white/10 text-center py-8 text-gray-500 bg-[#050b16]">
-          © 2026 Innovative Tech Engineers. All Rights Reserved.
-        </footer>
-
       </main>
 
     </PageWrapper>

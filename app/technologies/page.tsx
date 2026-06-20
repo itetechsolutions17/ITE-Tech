@@ -42,7 +42,7 @@ export default function Technologies() {
         <h1 className="text-4xl font-bold mb-4">Our Technology Stack</h1>
         <p className="max-w-2xl mx-auto text-gray-400">
           At Innovative Tech Engineers, we use modern, scalable and industry-proven technologies
-          to deliver high-performance digital solutions.
+          to deliver high-performance digital solutions. 
         </p>
       </section>
 
@@ -52,7 +52,8 @@ export default function Technologies() {
         ["JavaScript (ES6+)", "Dynamic and interactive web applications."],
         ["React.js", "Component-based scalable frontend architecture."],
         ["Angular", "Enterprise-grade frontend framework."],
-        ["Tailwind CSS", "Utility-first CSS for rapid UI design."]
+        ["Tailwind CSS", "Utility-first CSS for rapid UI design."],
+        ["Vue.js", "Progressive JavaScript framework for building UIs."]
       ]} />
 
       {/* BACKEND */}
@@ -76,7 +77,8 @@ export default function Technologies() {
       <Section title="Databases" items={[
         ["MySQL", "Relational database for structured data."],
         ["PostgreSQL", "Advanced open-source relational database."],
-        ["MongoDB", "NoSQL database for scalable applications."]
+        ["MongoDB", "NoSQL database for scalable applications."],
+        ["Redis", "In-memory data structure store for caching and real-time applications."]
       ]} />
 
       {/* CLOUD */}
@@ -94,12 +96,6 @@ export default function Technologies() {
         ["VS Code", "Professional code editor."],
         ["Jira", "Agile project management."]
       ]} />
-
-
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 text-center py-8 text-gray-500 bg-[#050b16]">
-        © 2026 Innovative Tech Engineers. All Rights Reserved.
-      </footer>
 
     </div>
   );
