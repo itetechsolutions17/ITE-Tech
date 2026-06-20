@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://itetechsolutions.com"),
+  alternates:
+  {
+    canonical: "/",
+  },
   title: "ITE Tech Solutions",
   description: "Innovative Software Solutions",
   icons: {
