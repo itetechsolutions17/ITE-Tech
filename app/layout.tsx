@@ -17,14 +17,54 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://itetechsolutions.com"),
-  alternates:
-  {
+
+  title: {
+    default: "ITE Tech Solutions",
+    template: "%s | ITE Tech Solutions",
+  },
+
+  description:
+    "ITE Tech Solutions provides Website Development, Software Development, Mobile App Development, SEO, Digital Marketing and IT Consulting Services.",
+
+  keywords: [
+    "ITE Tech Solutions",
+    "Website Development Pune",
+    "Software Development",
+    "Mobile App Development",
+    "SEO Services",
+    "Digital Marketing",
+    "IT Company Pune",
+  ],
+
+  alternates: {
     canonical: "/",
   },
-  title: "ITE Tech Solutions",
-  description: "Innovative Software Solutions",
+
+  openGraph: {
+    title: "ITE Tech Solutions",
+    description:
+      "Website Development, Software Development and Digital Marketing Services.",
+    url: "https://itetechsolutions.com",
+    siteName: "ITE Tech Solutions",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/projects/ITE logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ITE Tech Solutions",
+      },
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
-    icon: "/projects/logo.png",
+    icon: "/projects/ITE logo.png",
   },
 };
 
