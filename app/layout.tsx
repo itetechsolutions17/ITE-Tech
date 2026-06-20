@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://itetechsolutions.com"),
 
   title: {
-    default: "ITE Tech Solutions | delivers scalable, secure and performance-driven digital solutions tailored for startups, enterprises and institutions.",
+    default: "ITE Tech Solutions | Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
     template: "%s | ITE Tech Solutions | Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
   },
 
