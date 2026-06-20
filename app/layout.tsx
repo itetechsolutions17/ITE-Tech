@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://itetechsolutions.com"),
 
   title: {
-    default: "ITE Tech Solutions",
-    template: "%s | ITE Tech Solutions",
+    default: "ITE Tech Solutions | delivers scalable, secure and performance-driven digital solutions tailored for startups, enterprises and institutions.",
+    template: "%s | ITE Tech Solutions | Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
   },
 
   description:
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ITE Tech Solutions",
     description:
-      "Website Development, Software Development and Digital Marketing Services.",
+      "Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
     url: "https://itetechsolutions.com",
-    siteName: "ITE Tech Solutions",
+    siteName: "ITE Tech Solutions | delivers scalable, secure and performance-driven digital solutions tailored for startups, enterprises and institutions.",
     locale: "en_US",
     type: "website",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "/projects/logo.ico",
         width: 1200,
         height: 630,
-        alt: "ITE Tech Solutions",
+        alt: "ITE Tech Solutions Logo",
       },
     ],
   },
