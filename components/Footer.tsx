@@ -75,28 +75,28 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* Contact */}
-      <div>
-        <h3 className="text-white font-semibold mb-4">
-          Contact
-        </h3>
+        {/* Contact */}
+        <div>
+          <h3 className="text-white font-semibold mb-4">
+            Contact
+          </h3>
 
-        <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <Mail size={18} />
-            <span>itetechsolutions17@gmail.com</span>
-          </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <Mail size={18} />
+              <span>itetechsolutions17@gmail.com</span>
+            </div>
 
-          <div className="flex items-center gap-2">
-            <Phone size={18} />
-            <span>+91 96075 22007</span>
-          </div>
+            <div className="flex items-center gap-2">
+              <Phone size={18} />
+              <span>+91 96075 22007</span>
+            </div>
 
-          <div className="flex items-center gap-2">
-            <MapPin size={18} />
-            <span>Pune, Maharashtra, India</span>
+            <div className="flex items-center gap-2">
+              <MapPin size={18} />
+              <span>Pune, Maharashtra, India</span>
+            </div>
           </div>
         </div>
       </div>
