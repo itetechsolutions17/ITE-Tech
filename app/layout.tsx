@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/projects/ITE logo.png",
+        url: "/projects/ITE logo.ico",
         width: 1200,
         height: 630,
         alt: "ITE Tech Solutions",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/projects/ITE logo.png",
+    icon: "/projects/ITE logo.ico",
   },
 };
 
