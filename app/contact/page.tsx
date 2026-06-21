@@ -204,7 +204,7 @@ export default function Contact() {
 
                   <p>
                     <span className="text-white font-semibold">Phone:</span><br />
-                    +91-9607522003
+                    +91-9607522007
                   </p>
 
                   <p>
