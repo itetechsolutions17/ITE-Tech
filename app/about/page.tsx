@@ -270,17 +270,9 @@ export default function About() {
 
                   <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
 
-                    <p className="text-4xl text-blue-500/20 font-serif">
-                      "
-                    </p>
-
-                    Technology is not just about building software —
+                    "Technology is not just about building software —
                     it's about creating solutions that empower people,
-                    accelerate growth, and transform ideas into reality.
-
-                    <p className="text-4xl text-blue-500/20 font-serif">
-                      "
-                    </p>
+                    accelerate growth, and transform ideas into reality..."
 
                   </p>
 
