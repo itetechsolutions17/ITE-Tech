@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link href="/">
             <img
-              src="projects/logo.png"
+              src="projects/ITE_logo.png"
               alt="ITE Tech Solutions"
               width={55}
               height={55}
