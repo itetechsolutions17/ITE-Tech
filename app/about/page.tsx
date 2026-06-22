@@ -278,6 +278,9 @@ export default function About() {
                     accelerate growth, and transform ideas into reality.
                   </p>
 
+                <div className="absolute bottom-6 right-8 text-6xl text-blue-500/20 font-serif">
+                  "
+                </div>
                   <footer className="mt-8">
                     <h4 className="text-xl font-semibold text-blue-400">
                       Pushkar Bhegade
