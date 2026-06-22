@@ -207,7 +207,7 @@ export default function About() {
                 {/* Founder Image */}
                 <div className="flex justify-center">
                   <Image
-                    src="/founder.jpg"
+                    src="/projects/founder.jpg"
                     alt="Pushkar Bhegade"
                     width={260}
                     height={260}
