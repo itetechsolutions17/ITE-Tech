@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import PageWrapper from "../../components/PageWrapper";
+import Image from "next/image";
 
 const cards = [
   {
@@ -189,7 +190,110 @@ export default function About() {
 
           </div>
 
+          {/* Founder Section */}
 
+          <div className="mt-28">
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl"
+            >
+
+              <div className="grid lg:grid-cols-3 gap-10 items-center">
+
+                {/* Founder Image */}
+                <div className="flex justify-center">
+                  <Image
+                    src="/founder.jpg"
+                    alt="Pushkar Bhegade"
+                    width={260}
+                    height={260}
+                    className="rounded-3xl object-cover border border-blue-500/30"
+                    priority
+                  />
+                </div>
+
+                {/* Founder Content */}
+                <div className="lg:col-span-2">
+
+                  <p className="text-blue-400 font-semibold uppercase tracking-wider">
+                    Meet The Founder
+                  </p>
+
+                  <h2 className="text-4xl font-bold mt-3">
+                    Pushkar Bhegade
+                  </h2>
+
+                  <p className="text-cyan-400 mt-2 text-lg">
+                    Founder & Director
+                  </p>
+
+                  <p className="mt-6 text-gray-400 leading-9">
+                    Pushkar Bhegade is the Founder & Director of ITE Tech Solutions,
+                    a technology-driven company focused on delivering innovative
+                    software solutions for businesses. With expertise in software
+                    development, web technologies, cloud solutions, automation,
+                    and cybersecurity, he is passionate about creating scalable
+                    digital products that help organizations grow and succeed
+                    in the modern digital landscape.
+                  </p>
+
+                  <p className="mt-4 text-gray-400 leading-9">
+                    Under his leadership, ITE Tech Solutions provides custom
+                    web applications, mobile app development, cloud hosting,
+                    software maintenance, and cybersecurity services. His vision
+                    is to build a trusted technology company that empowers
+                    startups, institutions, and enterprises through innovation,
+                    quality, and long-term partnerships.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </motion.div>
+
+            {/* Founder Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mt-12">
+
+              <div className="relative bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl">
+
+                <div className="absolute top-6 left-8 text-6xl text-blue-500/20 font-serif">
+                  "
+                </div>
+
+                <blockquote className="text-center max-w-4xl mx-auto">
+
+                  <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
+                    Technology is not just about building software —
+                    it's about creating solutions that empower people,
+                    accelerate growth, and transform ideas into reality.
+                  </p>
+
+                  <footer className="mt-8">
+                    <h4 className="text-xl font-semibold text-blue-400">
+                      Pushkar Bhegade
+                    </h4>
+
+                    <p className="text-gray-500">
+                      Founder & Director, ITE Tech Solutions
+                    </p>
+                  </footer>
+
+                </blockquote>
+
+              </div>
+            </motion.div>
+
+          </div>
 
           {/* Why Choose */}
 
