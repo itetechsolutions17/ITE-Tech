@@ -270,7 +270,7 @@ export default function About() {
 
                   <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
 
-                    <p className="absolute top-6 left-8 text-4xl text-blue-500/20 font-serif">
+                    <p className="absolute text-4xl text-blue-500/20 font-serif">
                       "
                     </p>
 
@@ -278,7 +278,7 @@ export default function About() {
                     it's about creating solutions that empower people,
                     accelerate growth, and transform ideas into reality.
 
-                    <p className="absolute bottom-6 right-8 text-4xl text-blue-500/20 font-serif">
+                    <p className="absolute text-4xl text-blue-500/20 font-serif">
                       "
                     </p>
 
