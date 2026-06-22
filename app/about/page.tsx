@@ -268,18 +268,20 @@ export default function About() {
 
                 <blockquote className="text-center max-w-4xl mx-auto">
 
-                  <p className="absolute top-6 left-8 text-6xl text-blue-500/20 font-serif">
-                    "
-                  </p>
-
                   <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
+
+                    <p className="absolute top-6 left-8 text-4xl text-blue-500/20 font-serif">
+                      "
+                    </p>
+
                     Technology is not just about building software —
                     it's about creating solutions that empower people,
                     accelerate growth, and transform ideas into reality.
-                  </p>
 
-                  <p className="absolute bottom-6 right-8 text-6xl text-blue-500/20 font-serif">
-                    "
+                    <p className="absolute bottom-6 right-8 text-4xl text-blue-500/20 font-serif">
+                      "
+                    </p>
+
                   </p>
 
                   <footer className="mt-8">
@@ -290,7 +292,7 @@ export default function About() {
                     <p className="text-gray-500">
                       Founder & Director, ITE Tech Solutions
                     </p>
-                    
+
                   </footer>
 
                 </blockquote>
