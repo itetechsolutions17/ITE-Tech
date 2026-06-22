@@ -266,11 +266,11 @@ export default function About() {
 
               <div className="relative bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl">
 
-                <div className="absolute top-6 left-8 text-6xl text-blue-500/20 font-serif">
-                  "
-                </div>
-
                 <blockquote className="text-center max-w-4xl mx-auto">
+
+                  <p className="absolute top-6 left-8 text-6xl text-blue-500/20 font-serif">
+                    "
+                  </p>
 
                   <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
                     Technology is not just about building software —
@@ -278,9 +278,10 @@ export default function About() {
                     accelerate growth, and transform ideas into reality.
                   </p>
 
-                <div className="absolute bottom-6 right-8 text-6xl text-blue-500/20 font-serif">
-                  "
-                </div>
+                  <p className="absolute bottom-6 right-8 text-6xl text-blue-500/20 font-serif">
+                    "
+                  </p>
+
                   <footer className="mt-8">
                     <h4 className="text-xl font-semibold text-blue-400">
                       Pushkar Bhegade
@@ -289,6 +290,7 @@ export default function About() {
                     <p className="text-gray-500">
                       Founder & Director, ITE Tech Solutions
                     </p>
+                    
                   </footer>
 
                 </blockquote>
