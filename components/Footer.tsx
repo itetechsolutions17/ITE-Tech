@@ -85,14 +85,14 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Mail size={18} />
-              <a href="mailto:itetechsolutions17@gmail.com" className="hover:text-cyan-300">
+              <a href="mailto:itetechsolutions17@gmail.com" className="hover:text-blue-400">
                 itetechsolutions17@gmail.com
               </a>
             </div>
 
             <div className="flex items-center gap-2">
               <Phone size={18} />
-              <a href="tel:+919607522007" className="hover:text-cyan-300">
+              <a href="tel:+919607522007" className="hover:text-blue-400">
                 +91 96075 22007
               </a>
             </div>
