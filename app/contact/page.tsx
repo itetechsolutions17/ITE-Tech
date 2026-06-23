@@ -197,19 +197,13 @@ export default function Contact() {
 
                 <div className="space-y-6 text-lg text-gray-300 leading-9">
 
-                  <a
-                    href="mailto:itetechsolutions17@gmail.com"
-                    className="text-cyan-400 hover:text-cyan-300"
-                  >
+                  <p>
                     itetechsolutions17@gmail.com
-                  </a>
+                  </p>
 
-                  <a
-                    href="tel:+919607522007"
-                    className="text-cyan-400 hover:text-cyan-300"
-                  >
+                  <p>
                     +91-9607522007
-                  </a>
+                  </p>
 
                   <p>
                     <span className="text-white font-semibold">Location:</span><br />
