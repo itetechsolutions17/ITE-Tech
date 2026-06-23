@@ -197,15 +197,19 @@ export default function Contact() {
 
                 <div className="space-y-6 text-lg text-gray-300 leading-9">
 
-                  <p>
-                    <span className="text-white font-semibold">Email:</span><br />
+                  <a
+                    href="mailto:itetechsolutions17@gmail.com"
+                    className="text-cyan-400 hover:text-cyan-300"
+                  >
                     itetechsolutions17@gmail.com
-                  </p>
+                  </a>
 
-                  <p>
-                    <span className="text-white font-semibold">Phone:</span><br />
+                  <a
+                    href="tel:+919607522007"
+                    className="text-cyan-400 hover:text-cyan-300"
+                  >
                     +91-9607522007
-                  </p>
+                  </a>
 
                   <p>
                     <span className="text-white font-semibold">Location:</span><br />
@@ -229,7 +233,25 @@ export default function Contact() {
                   loading="lazy"
                 />
 
+                <a
+                  href="https://maps.google.com/?q=ITE+Tech+Solutions+Harikrishna+Complex+New+Sangavi+Pune"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 mt-4"
+                >
+                  Get Directions
+                </a>
+
               </div>
+
+              <a
+                href="https://wa.me/919607522007"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center rounded-2xl bg-green-600 py-4 text-lg font-semibold hover:bg-green-700 transition mt-6"
+              >
+                Chat on WhatsApp
+              </a>
 
               {/* Response Time */}
               <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center text-gray-300 text-lg">
