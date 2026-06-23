@@ -154,24 +154,30 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
+
               {/* MAP */}
               <div className="overflow-hidden rounded-3xl border border-white/10">
-                <iframe src="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed" width="100%" height="350" style={{ border: 0 }} loading="lazy" />
-                <div className="flex gap-4 justify-center mt-4">
+                <iframe
+                  src="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                />
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 mb-4 px-4">
                   <a
-                    href="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed"
+                    href="https://maps.google.com/?q=ITE+Tech+Solutions+Harikrishna+Complex+New+Sangavi+Pune"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition"
+                    className="text-center px-5 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition duration-300"
                   >
                     Get Directions
                   </a>
 
                   <a
                     href="tel:+919607522007"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-2 bg-green-600 rounded-full hover:bg-green-500 transition"
+                    className="text-center px-5 py-3 bg-green-600 rounded-full hover:bg-green-500 transition duration-300"
                   >
                     Call Now
                   </a>
@@ -180,21 +186,33 @@ export default function Contact() {
 
               {/* Social Links */}
               <div className="flex gap-6 justify-center">
-                <a href="https://www.linkedin.com/company/ite-tech-solutions/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition">
-                  <FaLinkedin size={24} />
+                <a
+                  href="https://www.linkedin.com/company/ite-tech-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-[#0A66C2] transition duration-300 hover:scale-110"
+                >
+                  <FaLinkedin size={28} />
                 </a>
-                <a href="https://www.instagram.com/itetech_official/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition">
-                  <FaInstagram size={24} />
+
+                <a
+                  href="https://www.instagram.com/itetech_official/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-pink-500 transition duration-300 hover:scale-110"
+                >
+                  <FaInstagram size={28} />
                 </a>
               </div>
+
               {/* Response Time */}
               <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center text-gray-300 text-lg">
-                We typically respond within 24-48 hours.
+                We typically respond within 24–48 business hours.
               </div>
             </motion.div>
           </div>
         </div>
-      </section>
-    </PageWrapper>
+      </section >
+    </PageWrapper >
   );
 }
