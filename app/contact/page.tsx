@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import PageWrapper from "../../components/PageWrapper";
 import { useState } from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -189,77 +190,70 @@ export default function Contact() {
             >
 
               {/* Info Card */}
-              <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10">
-
-                <h3 className="text-3xl font-bold text-cyan-400 mb-8">
-                  Contact Information
-                </h3>
-
-                <div className="space-y-6 text-lg text-gray-300 leading-9">
-
-                  <p>
-                    itetechsolutions17@gmail.com
-                  </p>
-
-                  <p>
-                    +91-9607522007
-                  </p>
-
-                  <p>
-                    <span className="text-white font-semibold">Location:</span><br />
-                    ITE Tech Solutions, Harikrishna Complex,
-                    Main Road, Samarth Nagar, New Sangavi,
-                    Pimpri-Chinchwad, Maharashtra 411027
-                  </p>
-
-                </div>
+              <div className="space-y-6 text-lg text-gray-300 leading-9">
+                <p>
+                  <span className="text-white font-semibold">Email:
+                  </span>
+                  <br />
+                  itetechsolutions17@gmail.com
+                </p>
+                <p>
+                  <span className="text-white font-semibold">Phone:
+                  </span>
+                  <br /> +91-9607522007
+                </p>
+                <p>
+                  <span className="text-white font-semibold">Location:
+                  </span>
+                  <br /> ITE Tech Solutions, Harikrishna Complex, Main Road,
+                  Samarth Nagar, New Sangavi, Pimpri-Chinchwad,
+                  Pune, Maharashtra 411027
+                </p>
 
               </div>
-
-              {/* MAP */}
-              <div className="overflow-hidden rounded-3xl border border-white/10">
-
-                <iframe
-                  src="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed"
-                  width="100%"
-                  height="350"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                />
-
-                <a
-                  href="https://maps.google.com/?q=ITE+Tech+Solutions+Harikrishna+Complex+New+Sangavi+Pune"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 mt-4"
-                >
-                  Get Directions
-                </a>
-
-              </div>
-
-              <a
-                href="https://wa.me/919607522007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center rounded-2xl bg-green-600 py-4 text-lg font-semibold hover:bg-green-700 transition mt-6"
-              >
-                Chat on WhatsApp
-              </a>
-
-              {/* Response Time */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center text-gray-300 text-lg">
-                We typically respond within 24 hours.
-              </div>
-
             </motion.div>
+          </div>
 
+          {/* MAP */}
+          <div className="overflow-hidden rounded-3xl border border-white/10">
+
+            <iframe
+              src="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
+
+            <a
+              href="https://maps.google.com/?q=ITE+Tech+Solutions+Harikrishna+Complex+New+Sangavi+Pune"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 mt-4"
+            >
+              Get Directions
+            </a>
+
+          </div>
+
+          <a
+            href="tel:+919607522007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-center rounded-2xl bg-green-600 py-4 text-lg font-semibold hover:bg-green-700 transition mt-6"
+          >
+            Call Us Now
+          </a>
+
+          {/* Response Time */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center text-gray-300 text-lg">
+            We typically respond within 24 hours.
           </div>
 
         </div>
 
       </section>
 
-    </PageWrapper>
+    </PageWrapper >
   );
 } 
