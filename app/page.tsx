@@ -514,6 +514,18 @@ export default function Home() {
 
             </p>
 
+            {/* Animated Down Arrow */}
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2
+              }}
+              className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
+            >
+              ↓
+            </motion.div>
+
             <Link
               href="/contact"
               className="inline-block mt-12 px-10 py-5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-lg font-semibold hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
@@ -523,17 +535,6 @@ export default function Home() {
 
           </motion.div>
 
-          {/* Animated Down Arrow */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 2
-            }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
-          >
-            ↓
-          </motion.div>
         </section>
       </main>
 
