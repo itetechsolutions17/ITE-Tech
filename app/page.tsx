@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import PageWrapper from "../components/PageWrapper";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   return (
@@ -11,12 +12,31 @@ export default function Home() {
       <main className="relative overflow-hidden bg-[#081120] text-gray-200 min-h-screen">
 
         {/* BACKGROUND GLOW */}
+
+        {/* Top Left */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 blur-[180px] rounded-full" />
 
-        <div className="absolute top-[30%] right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full" />
+        {/* Top Right */}
+        <div className="absolute top-[25%] right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[160px] rounded-full" />
 
+        {/* Bottom Center */}
+        <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-500/5 blur-[220px] rounded-full" />
         {/* HERO */}
         <section className="relative text-center py-28 px-6">
+
+          {/* Animated Floating Orb */}
+          <motion.div
+            animate={{
+              y: [15, -15, 15],
+              x: [10, -10, 10],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-20 left-[8%] w-40 h-40 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-600/20 blur-3xl"
+          />
 
           <motion.div
             initial={{ opacity: 0, y: 70 }}
@@ -24,35 +44,67 @@ export default function Home() {
             transition={{ duration: 1 }}
           >
             <div className="inline-block mb-8 px-5 py-2 rounded-full border border-blue-400/20 bg-blue-500/10 text-blue-300 text-sm font-medium tracking-wide hover:bg-blue-500/20 transition duration-300">
-              Enterprise Software & Digital Solutions
+              Trusted Technology Partner for Digital Transformation
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-blue-200 to-blue-500 bg-clip-text text-transparent">
 
-              Innovative Software
+              Building Digital
               <br />
 
-              Solutions For The
+              Solutions That
               <br />
 
-              Digital Era
+              Drive Business Growth
 
             </h1>
 
             <p className="max-w-3xl mx-auto mt-10 text-gray-400 text-lg md:text-xl leading-9">
 
-              Empowering startups, enterprises, and educational institutions
-              with scalable software, intelligent automation, modern UI/UX,
-              AI-powered systems, and enterprise-grade digital solutions.
+              Empowering startups, enterprises, and organizations with innovative software,
+              AI-powered solutions, cloud technologies, and enterprise-grade digital transformation services.
 
             </p>
 
+            <div className="mt-8 flex justify-center h-10">
+              <div className="relative">
+
+                {/* Glow Effect */}
+                <div className="absolute inset-0 blur-xl bg-cyan-500/20 rounded-full"></div>
+
+                <h2 className="relative text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+
+                  <Typewriter
+                    words={[
+                      "Got an Idea?",
+                      "Need a Digital Solution?",
+                      "Looking for Custom Software?",
+                      "Need a Professional Website?",
+                      "Need a Mobile Application?",
+                      "Planning Cloud Migration?",
+                      "Need AI Integration?",
+                      "Protect Your Business with Cybersecurity.",
+                      "Let's Build Something Amazing Together."
+                    ]}
+                    loop={0}
+                    cursor
+                    cursorStyle="▋"
+                    typeSpeed={70}
+                    deleteSpeed={40}
+                    delaySpeed={1800}
+                  />
+
+                </h2>
+
+              </div>
+            </div>
+
             {/* BUTTONS */}
-            <div className="mt-12 flex justify-center gap-5 flex-wrap">
+            <div className="mt-12 flex justify-center gap-6 flex-wrap">
 
               <Link
                 href="/services"
-                className="group relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:scale-105 transition duration-300"
+                className="group relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
               >
 
                 <span className="relative z-10">
@@ -65,10 +117,22 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="px-8 py-4 rounded-full border border-cyan-400/30 bg-white/5 backdrop-blur-lg text-cyan-300 font-semibold hover:bg-cyan-400/10 hover:scale-105 transition duration-300"
+                className="px-8 py-4 rounded-full border border-cyan-400/30 bg-white/5 backdrop-blur-lg text-cyan-300 font-semibold hover:bg-cyan-400/10 hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
               >
-                Talk to Experts
+                Book Free Consultation
               </Link>
+
+            </div>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+
+              <span>✓ Free Consultation </span>
+
+              <span>✓ Custom Software Development </span>
+
+              <span>✓ Enterprise-Grade Security </span>
+
+              <span>✓ Dedicated Technical Support </span>
 
             </div>
 
@@ -94,6 +158,11 @@ export default function Home() {
               "Enterprise Software",
               "Machine Learning",
               "API Development",
+              "Node.js",
+              "Java",
+              "Cybersecurity",
+              "DevOps",
+              "CRM",
             ].map((item, i) => (
 
               <div
@@ -119,6 +188,11 @@ export default function Home() {
               "Enterprise Software",
               "Machine Learning",
               "API Development",
+              "Node.js",
+              "Java",
+              "Cybersecurity",
+              "DevOps",
+              "CRM",
             ].map((item, i) => (
 
               <div
@@ -134,15 +208,112 @@ export default function Home() {
 
         </section>
 
+        {/* FREE CONSULTATION */}
+        <section className="px-6 md:px-16 py-20">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
+          >
+
+            {/* Background Glow */}
+            <div className="absolute -top-20 -right-20 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full" />
+            <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-600/10 blur-3xl rounded-full" />
+
+            <div className="relative grid lg:grid-cols-2 gap-12 items-center p-10 md:p-16">
+
+              {/* Left Side */}
+              <div>
+
+                <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-sm font-medium">
+                  FREE CONSULTATION
+                </span>
+
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Got an Idea?
+                </h2>
+
+                <p className="mt-4 text-cyan-400 text-2xl font-semibold">
+                  Let's Build It Together.
+                </p>
+
+                <p className="mt-6 text-gray-400 leading-8 text-lg">
+                  Every successful digital product starts with a conversation.
+                  Whether you need a website, mobile application, enterprise software,
+                  AI integration, cloud solutions, or cybersecurity services,
+                  our experts are here to guide you.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-4 text-sm text-gray-300">
+
+                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                    ✓ Free Consultation
+                  </span>
+
+                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                    ✓ Expert Guidance
+                  </span>
+
+                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                    ✓ Business Solutions
+                  </span>
+
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="inline-block mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
+                >
+                  Book Free Consultation
+                </Link>
+
+              </div>
+
+              {/* Right Side */}
+              <div className="hidden lg:flex justify-center">
+
+                <div className="relative w-80 h-80">
+
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/20 to-cyan-500/20 blur-3xl animate-pulse" />
+
+                  <div className="absolute inset-10 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-xl flex items-center justify-center">
+
+                    <div className="text-center">
+
+                      <h3 className="text-3xl font-bold text-cyan-300">
+                        Let's Talk
+                      </h3>
+
+                      <p className="mt-3 text-gray-400">
+                        Your next successful project starts here.
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </section>
+
         {/* STATS */}
         <section className="px-6 md:px-16 py-12">
 
           <div className="grid md:grid-cols-4 gap-6">
 
             {[
-              { value: "25+", label: "Projects Completed" },
+              { value: "Secure & Reliable", label: "Software Solutions" },
               { value: "10+", label: "Technologies Used" },
-              { value: "100%", label: "Client Satisfaction" },
+              { value: "100%", label: "Commitment" },
               { value: "24/7", label: "Support & Guidance" },
             ].map((item, i) => (
 
@@ -190,8 +361,16 @@ export default function Home() {
 
             {[
               {
-                title: "Internship-Oriented Development",
-                desc: "Live project exposure with industry-ready training programs.",
+                title: "Custom Software Development",
+                desc: "Tailored software solutions to meet your unique business needs.",
+              },
+              {
+                title: "AI & Machine Learning Solutions",
+                desc: "Intelligent systems that enhance decision-making and automation.",
+              },
+              {
+                title: "Cloud Solutions & Migration",
+                desc: "Seamless cloud integration and migration for scalable operations.",
               },
               {
                 title: "Web Application Development",
@@ -205,6 +384,14 @@ export default function Home() {
                 title: "Enterprise Systems",
                 desc: "ERP, CRM & automation systems for operational growth.",
               },
+              {
+                title: "Cybersecurity Services",
+                desc: "Protecting your digital assets with advanced security measures.",
+              },
+              {
+                title: "IT Consulting & Support",
+                desc: "Strategic IT consulting and reliable technical support to accelerate business growth.",
+              }
             ].map((item, i) => (
 
               <motion.div
@@ -316,23 +503,37 @@ export default function Home() {
           >
 
             <h2 className="text-5xl font-bold mb-8">
-              Let’s Build Something Powerful Together
+              Ready to Transform Your Business?
             </h2>
 
             <p className="max-w-3xl mx-auto text-gray-400 text-xl leading-10">
-              Transform your ideas into scalable digital products with
-              Innovative Tech Engineers.
+
+              Transform your ideas into innovative digital solutions with ITE Tech Solutions.
+
+              Whether you're building a startup, modernizing an existing business, or launching your next enterprise software, our experts are ready to help you every step of the way.
+
             </p>
 
             <Link
               href="/contact"
-              className="inline-block mt-12 px-10 py-5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-lg font-semibold hover:scale-105 transition duration-300"
+              className="inline-block mt-12 px-10 py-5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-lg font-semibold hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
             >
-              Start Your Project
+              Book Free Consultation
             </Link>
 
           </motion.div>
 
+          {/* Animated Down Arrow */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 2
+            }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
+          >
+            ↓
+          </motion.div>
         </section>
       </main>
 
