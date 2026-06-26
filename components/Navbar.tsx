@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
@@ -8,6 +10,13 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -26,13 +35,20 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Link href="/">
-            <img
-              src="projects/ITE_logo.png"
-              alt="ITE Tech Solutions"
-              width={55}
-              height={55}
-              className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]"
-            />
+            {mounted && (
+              <Image
+                src={
+                  theme === "dark"
+                    ? "/projects/logo-light.png"
+                    : "/projects/logo-dark.png"
+                }
+                alt="ITE Tech Solutions"
+                width={55}
+                height={55}
+                priority
+                className="drop-shadow-[0_0_10px_rgba(59,130,246,0.6)] transition-all duration-300"
+              />
+            )}
           </Link>
 
           <Link
@@ -107,7 +123,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`${pathname === item.path
                     ? "text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
+                    : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
                     }`}
                 >
                   {item.name}
