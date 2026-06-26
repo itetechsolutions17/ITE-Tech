@@ -92,12 +92,12 @@ export default function Contact() {
     <PageWrapper>
       <section className="relative min-h-screen overflow-hidden px-6 md:px-16 py-24 text-gray-900 dark:text-white transition-colors duration-500">
         {/* Background Glow */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 dark:bg-blue-500/10 blur-[140px] rounded-full" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full" />
         <div className="relative max-w-7xl mx-auto">
           {/* Heading */}
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center mb-20" >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-500 dark:from-white dark:via-blue-200 dark:to-cyan-400 bg-clip-text text-transparent">
               Let's Build Something Amazing Together
             </h1>
 
@@ -110,22 +110,24 @@ export default function Contact() {
 
             </p>
           </motion.div>
+          
           {/* Contact Grid */}
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <motion.div className="grid lg:grid-cols-2 gap-10 items-start">
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-6">
               Trusted by Startups • Businesses • Educational Institutions
             </div>
+
             {/* FORM */}
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-10 transition-all duration-300" >
               {/* Glow */}
               <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-cyan-500/10" />
               <div className="relative">
-                <h2 className="text-3xl font-bold text-cyan-400 mb-8">
+                <h2 className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-8">
                   Request a Free Consultation
                 </h2>
 
-                <p className="mt-2 text-gray-400">
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
                   Fill in your details and our team will get back to you within 24 business hours.
                 </p>
 
@@ -188,9 +190,9 @@ export default function Contact() {
                       setFormData({ ...formData, message: e.target.value }
                       )}
                     className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
-                  <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300" disabled={loading}>
+                  <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]" disabled={loading} >
                     {loading ? (
-                      <span className="flex items-center justify-center gap-2">
+                      <span className="flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]">
                         <Loader2 className="animate-spin" size={18} />
                         Sending...
                       </span>
@@ -210,7 +212,7 @@ export default function Contact() {
               className="space-y-8" >
               {/* Info Card */}
               <div className="rounded-3xl border bg-gray-50 dark:bg-white/5 border-gray-200 dark:border-white/10 backdrop-blur-xl p-10">
-                <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+                <h3 className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-8">
                   Contact Information
                 </h3>
                 <div className="space-y-5">
@@ -276,7 +278,7 @@ export default function Contact() {
               </div>
 
               {/* MAP */}
-              <div className="overflow-hidden rounded-3xl border border-white/10">
+              <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10">
                 <iframe
                   src="https://www.google.com/maps?q=ITE%20Tech%20Solutions,%20Harikrishna%20Complex,%20Main%20Road,%20Samarth%20Nagar,%20New%20Sangavi,%20Pimpri-Chinchwad,%20Maharashtra%20411027&output=embed"
                   width="100%"
@@ -320,14 +322,14 @@ export default function Contact() {
               {/* Why Contact Us */}
               <div className="rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-8">
 
-                <h3 className="text-2xl font-bold text-cyan-400 mb-8 text-center">
+                <h3 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-8 text-center">
                   Why Contact ITE Tech Solutions?
                 </h3>
 
                 <div className="grid sm:grid-cols-2 gap-5">
 
                   {/* Card 1 */}
-                  <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
+                  <div className="flex items-start gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
 
                     <ShieldCheck
                       size={26}
@@ -347,7 +349,7 @@ export default function Contact() {
                   </div>
 
                   {/* Card 2 */}
-                  <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
+                  <div className="flex items-start gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
 
                     <Clock3
                       size={26}
@@ -367,7 +369,7 @@ export default function Contact() {
                   </div>
 
                   {/* Card 3 */}
-                  <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
+                  <div className="flex items-start gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
 
                     <BriefcaseBusiness
                       size={26}
@@ -387,7 +389,7 @@ export default function Contact() {
                   </div>
 
                   {/* Card 4 */}
-                  <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
+                  <div className="flex items-start gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-5 hover:border-cyan-400/30 transition duration-300">
 
                     <Headset
                       size={26}
@@ -474,7 +476,7 @@ export default function Contact() {
 
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section >
     </PageWrapper >
