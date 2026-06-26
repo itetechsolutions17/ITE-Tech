@@ -47,7 +47,7 @@ export default function Home() {
               Trusted Technology Partner for Digital Transformation
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-blue-200 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-900 dark:from-white via-blue-600 dark:via-blue-200 to-cyan-500 bg-clip-text text-transparent">
 
               Building Digital
               <br />
@@ -65,7 +65,7 @@ export default function Home() {
 
             </p>
 
-            <p className="max-w-3xl mx-auto mt-10 text-gray-400 text-lg md:text-xl leading-9">
+            <p className="max-w-3xl mx-auto mt-10 text-gray-600 dark:text-gray-300 text-lg md:text-xl leading-9">
 
               Empowering startups, enterprises, and organizations with innovative software,
               AI-powered solutions, cloud technologies, and enterprise-grade digital transformation services.
@@ -130,7 +130,7 @@ export default function Home() {
 
             </div>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-300">
 
               <span>✓ Free Consultation </span>
 
@@ -158,7 +158,7 @@ export default function Home() {
         </section>
 
         {/* TECH MARQUEE */}
-        <section className="relative overflow-hidden py-10 border-y border-white/10 bg-[#081120]">
+        <section className="relative overflow-hidden py-10 border-y border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-[#081120] transition-colors duration-500">
 
           <div className="flex gap-6 whitespace-nowrap animate-marquee">
 
@@ -184,7 +184,7 @@ export default function Home() {
 
               <div
                 key={i}
-                className="px-6 py-3 rounded-full border border-blue-400/20 bg-white/5 backdrop-blur-lg text-blue-300 text-sm font-medium"
+                className="px-6 py-3 rounded-full border bg-white dark:bg-white/5 border-gray-300 dark:border-blue-400/20 text-blue-700 dark:text-blue-300 backdrop-blur-lg text-sm font-medium"
               >
                 {item}
               </div>
@@ -233,7 +233,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
+            className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 backdrop-blur-xl"
           >
 
             {/* Background Glow */}
@@ -249,7 +249,7 @@ export default function Home() {
                   30-Minute Free Strategy Session
                 </span>
 
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                   Got an Idea?
                 </h2>
 
@@ -257,7 +257,7 @@ export default function Home() {
                   Let's Build It Together.
                 </p>
 
-                <p className="mt-6 text-gray-400 leading-8 text-lg">
+                <p className="mt-6 text-gray-600 dark:text-gray-300 leading-8 text-lg">
                   Every successful digital product starts with a conversation.
                   Whether you need a website, mobile application, enterprise software,
                   AI integration, cloud solutions, or cybersecurity services,
@@ -266,15 +266,15 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap gap-4 text-sm text-gray-300">
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                  <span className="px-4 py-2 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">
                     ✓ Free Consultation
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                  <span className="px-4 py-2 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">
                     ✓ Expert Guidance
                   </span>
 
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                  <span className="px-4 py-2 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300">
                     ✓ Business Solutions
                   </span>
 
@@ -296,15 +296,15 @@ export default function Home() {
 
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/20 to-cyan-500/20 blur-3xl animate-pulse" />
 
-                  <div className="absolute inset-10 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-xl flex items-center justify-center">
+                  <div className="absolute inset-10 rounded-full border border-cyan-400/20 bg-gray-100 dark:bg-white/5 backdrop-blur-xl flex items-center justify-center">
 
                     <div className="text-center">
 
-                      <h3 className="text-3xl font-bold text-cyan-300">
+                      <h3 className="text-3xl font-bold text-cyan-600 dark:text-cyan-300">
                         Let's Talk
                       </h3>
 
-                      <p className="mt-3 text-gray-400">
+                      <p className="mt-3 text-gray-600 dark:text-gray-300">
                         Your next successful project starts here.
                       </p>
 
@@ -341,14 +341,14 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 text-center"
+                className="rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 backdrop-blur-xl p-8 text-center"
               >
 
                 <h3 className="text-4xl font-bold text-cyan-400 mb-2">
                   {item.value}
                 </h3>
 
-                <p className="text-gray-400">
+                <p className="text-gray-600 dark:text-gray-300">
                   {item.label}
                 </p>
 
@@ -421,7 +421,7 @@ export default function Home() {
                   y: -8,
                   scale: 1.02,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8"
+                className="group relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 backdrop-blur-xl p-8"
               >
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-cyan-500/10" />
@@ -432,7 +432,7 @@ export default function Home() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-400 leading-8">
+                  <p className="text-gray-600 dark:text-gray-300 leading-8">
                     {item.desc}
                   </p>
 
@@ -447,7 +447,7 @@ export default function Home() {
         </section>
 
         {/* WHY US */}
-        <section className="relative px-6 md:px-16 py-28 bg-[#0d1728]">
+        <section className="relative px-6 md:px-16 py-28 bg-gray-100 dark:bg-[#0d1728]">
 
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -488,14 +488,14 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 text-center"
+                className="rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 backdrop-blur-xl p-8 text-center"
               >
 
-                <h4 className="text-2xl font-bold mb-5 text-white">
+                <h4 className="text-2xl font-bold mb-5 text-gray-900 dark:text-white">
                   {item.title}
                 </h4>
 
-                <p className="text-gray-400 leading-8">
+                <p className="text-gray-600 dark:text-gray-300 leading-8">
                   {item.desc}
                 </p>
 
@@ -523,7 +523,7 @@ export default function Home() {
               Ready to Transform Your Business?
             </h2>
 
-            <p className="max-w-3xl mx-auto text-gray-400 text-xl leading-10">
+            <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-xl leading-10">
 
               Transform your ideas into innovative digital solutions with ITE Tech Solutions.
 
@@ -533,8 +533,7 @@ export default function Home() {
 
             <Link
               href="/contact"
-              className="inline-block mt-12 px-10 py-5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-lg font-semibold hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] transition duration-300"
-            >
+              className="px-8 py-4 rounded-full border border-cyan-500/30 bg-gray-100 dark:bg-white/5 backdrop-blur-lg text-cyan-600 dark:text-cyan-300 hover:bg-cyan-100 dark:hover:bg-cyan-400/10 transition duration-300">
               Book Free Consultation
             </Link>
 
@@ -542,6 +541,6 @@ export default function Home() {
         </section>
       </main>
 
-    </PageWrapper>
+    </PageWrapper >
   );
 }

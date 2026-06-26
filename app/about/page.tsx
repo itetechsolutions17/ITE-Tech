@@ -24,11 +24,12 @@ export default function About() {
   return (
     <PageWrapper>
 
-      <section className="relative min-h-screen overflow-hidden px-6 md:px-16 py-24 text-white">
+      <section className="relative min-h-screen overflow-hidden px-6 md:px-16 py-24 text-gray-900 dark:text-white bg-white dark:bg-[#0b1120] transition-colors duration-500">
 
         {/* Background Glow */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/20 blur-[120px] rounded-full" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/20 blur-[120px] rounded-full" />
+
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/20 blur-[120px] rounded-full" />
 
         <div className="relative max-w-7xl mx-auto">
 
@@ -44,13 +45,13 @@ export default function About() {
               ABOUT ITE TECH SOLUTIONS
             </div>
 
-            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="mt-6 text-5xl md:text-6xl text-gray-900 dark:text-white font-bold leading-tight">
               Building Technology
               That Drives
               Business Growth
             </h1>
 
-            <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg leading-8">
               ITE Tech Solutions is a technology-driven software company specializing in custom software development,
 
               web applications, mobile solutions, cloud technologies, AI integration, and cybersecurity services.
@@ -71,17 +72,17 @@ export default function About() {
               {
                 value: "10+",
                 label: "Technologies Used",
-                color: "text-blue-400"
+                color: "text-blue-600 dark:text-blue-400"
               },
               {
                 value: "24/7",
                 label: "Technical Support",
-                color: "text-cyan-400"
+                color: "text-blue-600 dark:text-blue-400"
               },
               {
                 value: "100%",
                 label: "Commitment",
-                color: "text-blue-300"
+                color: "text-blue-600 dark:text-blue-400"
               }
             ].map((item, i) => (
 
@@ -91,14 +92,14 @@ export default function About() {
                   scale: 1.05,
                   y: -8
                 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl text-center"
+                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 backdrop-blur-xl text-center shadow-lg"
               >
 
                 <h2 className={`text-5xl font-bold ${item.color}`}>
                   {item.value}
                 </h2>
 
-                <p className="mt-4 text-gray-400">
+                <p className="mt-4 text-gray-600 dark:text-gray-300">
                   {item.label}
                 </p>
 
@@ -135,7 +136,7 @@ export default function About() {
                   scale: 1.03,
                   y: -10
                 }}
-                className="relative overflow-hidden bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl"
+                className="relative overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 backdrop-blur-xl shadow-lg"
               >
 
                 <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-cyan-500/10" />
@@ -144,7 +145,7 @@ export default function About() {
                   {card.title}
                 </h3>
 
-                <p className="relative text-gray-400 leading-8">
+                <p className="relative text-gray-600 dark:text-gray-300 leading-8">
                   {card.desc}
                 </p>
 
@@ -164,14 +165,14 @@ export default function About() {
               whileHover={{
                 scale: 1.03
               }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl"
+              className=" bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg rounded-3xl p-10 backdrop-blur-xl"
             >
 
               <h2 className="text-4xl font-bold text-blue-400 mb-6">
                 Our Mission
               </h2>
 
-              <p className="text-gray-400 leading-9">
+              <p className="text-gray-600 dark:text-gray-300 leading-9">
                 To empower startups, institutions and businesses
                 through innovative technology solutions that
                 improve productivity and accelerate growth.
@@ -179,20 +180,18 @@ export default function About() {
 
             </motion.div>
 
-
-
             <motion.div
               whileHover={{
                 scale: 1.03
               }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg rounded-3xl p-10 backdrop-blur-xl"
             >
 
               <h2 className="text-4xl font-bold text-cyan-400 mb-6">
                 Our Vision
               </h2>
 
-              <p className="text-gray-400 leading-9">
+              <p className="text-gray-600 dark:text-gray-300 leading-9">
                 To become a leading technology company delivering
                 intelligent and future-ready digital solutions.
               </p>
@@ -210,7 +209,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg rounded-3xl p-10 backdrop-blur-xl"
             >
 
               <div className="grid lg:grid-cols-3 gap-10 items-center">
@@ -243,12 +242,12 @@ export default function About() {
                       Founder & Director
                     </p>
 
-                    <p className="text-gray-400 text-sm tracking-wide">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm tracking-wide">
                       Software Architect • Technology Strategist
                     </p>
                   </div>
 
-                  <p className="mt-6 text-gray-400 leading-9">
+                  <p className="mt-6 text-gray-600 dark:text-gray-300 leading-9">
                     Pushkar Bhegade is the Founder & Director of ITE Tech Solutions,
                     a technology-driven company focused on delivering innovative
                     software solutions for businesses. With expertise in software
@@ -258,7 +257,7 @@ export default function About() {
                     in the modern digital landscape.
                   </p>
 
-                  <p className="mt-4 text-gray-400 leading-9">
+                  <p className="mt-4 text-gray-600 dark:text-gray-300 leading-9">
                     Under his leadership, ITE Tech Solutions provides custom
                     web applications, mobile app development, cloud hosting,
                     software maintenance, and cybersecurity services. His vision
@@ -281,11 +280,11 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="mt-12">
 
-              <div className="relative bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl">
+              <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg rounded-3xl p-10 backdrop-blur-xl">
 
                 <blockquote className="text-center max-w-4xl mx-auto">
 
-                  <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
+                  <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-700 dark:text-gray-200 italic">
 
                     "We don't just build software.
 
@@ -301,11 +300,11 @@ export default function About() {
                       Pushkar Bhegade
                     </h4>
 
-                    <p className="text-gray-500">
+                    <p className="text-gray-600 dark:text-gray-500">
                       Founder & Director
                     </p>
 
-                    <p className="text-gray-600 text-sm mt-1">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                       ITE Tech Solutions
                     </p>
 
@@ -342,7 +341,7 @@ export default function About() {
                     y: -10,
                     scale: 1.05
                   }}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center backdrop-blur-xl"
+                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg rounded-2xl p-8 text-center backdrop-blur-xl"
                 >
 
                   <div className="text-5xl mb-5">
@@ -353,7 +352,7 @@ export default function About() {
                     {item}
                   </h3>
 
-                  <p className="mt-3 text-gray-400 leading-7">
+                  <p className="mt-3 text-gray-600 dark:text-gray-300 leading-7">
                     {item === "Live Industry Projects" && "Hands-on experience with real-world projects."}
                     {item === "Scalable Architecture" && "Building systems that grow with your business."}
                     {item === "Modern Technologies" && "Utilizing the latest tools and frameworks."}
@@ -370,13 +369,13 @@ export default function About() {
 
           <section className="text-center py-24">
 
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-5xl font-bold text-gray-900 dark:text-white">
 
               Let's Build Something Great Together
 
             </h2>
 
-            <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
+            <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
 
               Ready to transform your ideas into secure, scalable and modern digital solutions?
 
@@ -384,10 +383,8 @@ export default function About() {
 
             <Link
               href="/contact"
-              className="...">
-
+              className="inline-block mt-10 px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:scale-105 transition">
               Book Free Consultation
-
             </Link>
 
           </section>

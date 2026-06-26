@@ -20,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#081120]/80 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 dark:border-white/10 bg-white/80 dark:bg-[#081120]/80 backdrop-blur-xl transition-colors duration-500">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-16 py-4">
 
         {/* Logo */}
@@ -52,7 +52,7 @@ export default function Navbar() {
               href={item.path}
               className={`group relative transition ${pathname === item.path
                 ? "text-blue-400"
-                : "text-gray-300 hover:text-blue-400"
+                : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
                 }`}
             >
               {item.name}
@@ -87,7 +87,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <button
-            className="text-white text-3xl"
+            className="text-gray-900 dark:text-white text-3xl"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? "✕" : "☰"}
@@ -97,7 +97,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-[#081120] border-t border-white/10">
+          <div className="md:hidden bg-white dark:bg-[#081120] border-t border-white/10">
             <div className="flex flex-col px-6 py-4 space-y-4">
 
               {navItems.map((item) => (
