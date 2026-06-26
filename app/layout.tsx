@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import { ThemeProvider } from "next-themes";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,21 +79,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#0b1120] text-white">
+      <body className="min-h-full bg-white text-gray-900 transition-colors duration-500 dark:bg-[#0b1120] dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Navbar />
 
-        <Navbar />
+          <main className="pt-24">
+            {children}
 
-        <main className="pt-24">
-          {children}
+          </main>
 
-        </main>
+          <Footer />
 
-        <Footer />
+          <WhatsAppButton />
 
-        <WhatsAppButton />
-
+        </ThemeProvider>
       </body>
     </html>
   );

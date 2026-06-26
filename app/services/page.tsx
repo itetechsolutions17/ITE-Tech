@@ -3,6 +3,17 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import PageWrapper from "../../components/PageWrapper";
+import {
+  Code2,
+  Globe,
+  BrainCircuit,
+  Smartphone,
+  Building2,
+  Cloud,
+  Palette,
+  GraduationCap,
+  LaptopMinimal
+} from "lucide-react";
 
 export default function Services() {
 
@@ -10,54 +21,54 @@ export default function Services() {
     {
       title: "Custom Software Development",
       desc: "End-to-end web and enterprise software built with scalable architecture and modern technologies.",
-      icon: "💻",
+      icon: LaptopMinimal,
     },
     {
       title: "Website Development",
       desc: "Responsive and scalable websites using modern frameworks.",
-      icon: "🌐",
+      icon: Globe,
     },
     {
       title: "Software Solutions",
       desc: "Custom enterprise software and automation tools.",
-      icon: "⚙️",
+      icon: Code2,
     },
     {
       title: "AI/ML Solutions",
       desc: "Smart systems using AI and machine learning.",
-      icon: "🤖",
+      icon: BrainCircuit,
     },
     {
       title: "Web & Mobile Applications",
       desc: "High-performance web platforms and Android/iOS applications with modern UI.",
-      icon: "📱",
+      icon: Smartphone,
     },
     {
       title: "Enterprise Solutions",
       desc: "ERP, CRM and automation systems to improve workflow efficiency.",
-      icon: "🏢",
+      icon: Building2,
     },
     {
       title: "Cloud & DevOps",
       desc: "Cloud infrastructure, Docker, CI/CD pipelines and scalable deployment.",
-      icon: "☁️",
+      icon: Cloud,
     },
     {
       title: "UI/UX & Product Design",
       desc: "User-centric interface design with modern and engaging experiences.",
-      icon: "🎨",
+      icon: Palette,
     },
     {
       title: "Industry Internship Programs",
       desc: "Live project-based internships aligned with industry standards.",
-      icon: "🚀",
+      icon: GraduationCap,
     },
   ];
 
   return (
     <PageWrapper>
 
-      <main className="relative overflow-hidden bg-[#081120] text-white min-h-screen">
+      <main className="relative overflow-hidden bg-white dark:bg-[#0b1120] text-gray-900 dark:text-white transition-colors duration-500 min-h-screen">
 
         {/* Background Glow */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-[180px] rounded-full" />
@@ -81,15 +92,18 @@ export default function Services() {
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
 
-              Our Core Services
+              Transforming Ideas Into
+              Powerful Digital Solutions
 
             </h1>
 
             <p className="max-w-3xl mx-auto mt-8 text-gray-400 text-lg leading-9">
 
-              Innovative Tech Engineers delivers scalable, secure and
-              performance-driven digital solutions tailored for startups,
-              enterprises and institutions.
+              We design, develop and deliver
+              modern software solutions,
+              enterprise applications,
+              websites and AI-powered products
+              that help businesses grow.
 
             </p>
 

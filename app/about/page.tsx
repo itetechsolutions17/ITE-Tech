@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import PageWrapper from "../../components/PageWrapper";
 import Image from "next/image";
+import Link from "next/dist/client/link";
 
 const cards = [
   {
@@ -39,14 +40,24 @@ export default function About() {
             className="text-center"
           >
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
-              About ITE Tech Solutions
+            <div className="inline-block px-5 py-2 rounded-full border border-blue-400/20 bg-blue-500/10 text-blue-300 text-sm font-medium tracking-wide">
+              ABOUT ITE TECH SOLUTIONS
+            </div>
+
+            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+              Building Technology
+              That Drives
+              Business Growth
             </h1>
 
             <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
-              ITE Tech Solutions delivers high-quality software,
-              scalable web applications and innovative digital
-              solutions for startups, institutions and enterprises.
+              ITE Tech Solutions is a technology-driven software company specializing in custom software development,
+
+              web applications, mobile solutions, cloud technologies, AI integration, and cybersecurity services.
+
+              We partner with startups, enterprises, educational institutions, and growing businesses to build secure,
+
+              scalable, and future-ready digital solutions.
             </p>
 
           </motion.div>
@@ -58,18 +69,18 @@ export default function About() {
 
             {[
               {
-                value: "25+",
-                label: "Projects Delivered",
+                value: "10+",
+                label: "Technologies Used",
                 color: "text-blue-400"
               },
               {
-                value: "10+",
-                label: "Technologies Used",
+                value: "24/7",
+                label: "Technical Support",
                 color: "text-cyan-400"
               },
               {
                 value: "100%",
-                label: "Client Focused",
+                label: "Commitment",
                 color: "text-blue-300"
               }
             ].map((item, i) => (
@@ -211,7 +222,7 @@ export default function About() {
                     alt="Pushkar Bhegade"
                     width={260}
                     height={260}
-                    className="rounded-3xl object-cover border border-blue-500/30"
+                    className="rounded-3xl object-cover border border-blue-500/30 shadow-[0_0_40px_rgba(59,130,246,0.25)] hover:scale-105 transition duration-500"
                     priority
                   />
                 </div>
@@ -227,9 +238,15 @@ export default function About() {
                     Pushkar Bhegade
                   </h2>
 
-                  <p className="text-cyan-400 mt-2 text-lg">
-                    Founder & Director
-                  </p>
+                  <div className="mt-2 space-y-1">
+                    <p className="text-cyan-400 text-lg font-semibold">
+                      Founder & Director
+                    </p>
+
+                    <p className="text-gray-400 text-sm tracking-wide">
+                      Software Architect • Technology Strategist
+                    </p>
+                  </div>
 
                   <p className="mt-6 text-gray-400 leading-9">
                     Pushkar Bhegade is the Founder & Director of ITE Tech Solutions,
@@ -270,19 +287,26 @@ export default function About() {
 
                   <p className="text-2xl md:text-3xl font-light leading-relaxed text-gray-200 italic">
 
-                    "Technology is not just about building software —
-                    it's about creating solutions that empower people,
-                    accelerate growth, and transform ideas into reality..."
+                    "We don't just build software.
+
+                    We build scalable digital solutions
+                    that help businesses innovate,
+                    grow, and lead with confidence."
 
                   </p>
 
                   <footer className="mt-8">
+
                     <h4 className="text-xl font-semibold text-blue-400">
                       Pushkar Bhegade
                     </h4>
 
                     <p className="text-gray-500">
-                      Founder & Director, ITE Tech Solutions
+                      Founder & Director
+                    </p>
+
+                    <p className="text-gray-600 text-sm mt-1">
+                      ITE Tech Solutions
                     </p>
 
                   </footer>
@@ -322,7 +346,7 @@ export default function About() {
                 >
 
                   <div className="text-5xl mb-5">
-                    ⭐
+                    ✓
                   </div>
 
                   <h3 className="font-semibold text-lg">
@@ -343,6 +367,30 @@ export default function About() {
             </div>
 
           </div>
+
+          <section className="text-center py-24">
+
+            <h2 className="text-5xl font-bold">
+
+              Let's Build Something Great Together
+
+            </h2>
+
+            <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
+
+              Ready to transform your ideas into secure, scalable and modern digital solutions?
+
+            </p>
+
+            <Link
+              href="/contact"
+              className="...">
+
+              Book Free Consultation
+
+            </Link>
+
+          </section>
 
         </div>
 

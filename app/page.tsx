@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <PageWrapper>
 
-      <main className="relative overflow-hidden bg-[#081120] text-gray-200 min-h-screen">
+      <main className="relative overflow-hidden bg-white dark:bg-[#081120] text-gray-900 dark:text-gray-200 min-h-screen transition-colors duration-500">
 
         {/* BACKGROUND GLOW */}
 
@@ -58,6 +58,12 @@ export default function Home() {
               Drive Business Growth
 
             </h1>
+
+            <p className="mt-6 text-cyan-400 font-medium tracking-wide">
+
+              Website Development • Mobile Apps • AI • Cloud • Cybersecurity
+
+            </p>
 
             <p className="max-w-3xl mx-auto mt-10 text-gray-400 text-lg md:text-xl leading-9">
 
@@ -138,6 +144,17 @@ export default function Home() {
 
           </motion.div>
 
+          {/* Scroll Down Indicator */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+            }}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-cyan-400 text-2xl"
+          >
+            ↓
+          </motion.div>
         </section>
 
         {/* TECH MARQUEE */}
@@ -229,7 +246,7 @@ export default function Home() {
               <div>
 
                 <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-sm font-medium">
-                  FREE CONSULTATION
+                  30-Minute Free Strategy Session
                 </span>
 
                 <h2 className="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight">
@@ -311,7 +328,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-6">
 
             {[
-              { value: "Secure & Reliable", label: "Software Solutions" },
+              { value: "Secure", label: "Software Solutions" },
               { value: "10+", label: "Technologies Used" },
               { value: "100%", label: "Commitment" },
               { value: "24/7", label: "Support & Guidance" },
@@ -521,18 +538,6 @@ export default function Home() {
               Book Free Consultation
             </Link>
 
-          </motion.div>
-
-          {/* Animated Down Arrow */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 2
-            }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cyan-400"
-          >
-            ↑
           </motion.div>
         </section>
       </main>
