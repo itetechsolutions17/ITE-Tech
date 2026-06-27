@@ -95,6 +95,13 @@ export default function RootLayout({
 
           <WhatsAppButton />
 
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 4000,
+            }}
+          />
+
         </ThemeProvider>
       </body>
     </html>

@@ -53,18 +53,23 @@ export default function Contact() {
       setLoading(true);
       try {
         console.log(formData);
-        await fetch
-          ("https://script.google.com/macros/s/AKfycbzaOshvH7Jx-cbR9S7zgPCsN6CMR1haFZdX4fXerr_pP8JB5z2A0BM6dQW8AhKcbtpc/exec",
-            {
-              method: "POST",
-              mode: "no-cors",
-              headers:
-              {
-                "Content-Type":
-                  "application/json",
-              },
-              body: JSON.stringify(formData),
-            });
+        const res = await fetch(
+          "https://script.google.com/macros/s/AKfycbxDfLSd-u7SM2yEv9LXRZ0ANXdcNQo-Crzty9xdEE9a5nBiaVtX4T0M9lIYv-0EEw9j/exec",
+          {
+            method: "POST",
+            body: new URLSearchParams({
+              name: formData.name,
+              email: formData.email,
+              phone: formData.phone,
+              service: formData.service,
+              message: formData.message,
+            }),
+          }
+        );
+
+        if (res && !res.ok) {
+          throw new Error(`Request failed with status: ${res.status}`);
+        }
         toast.success(
           "Your inquiry has been submitted successfully!"
         );
@@ -75,7 +80,7 @@ export default function Contact() {
           service: "",
           message: "",
         });
-        setLoading(false);
+
 
       }
 
@@ -110,99 +115,101 @@ export default function Contact() {
 
             </p>
           </motion.div>
-          
+
           {/* Contact Grid */}
           <motion.div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* Side-by-side on desktop: Form (col 1) + Info stack (col 2) */}
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-6">
+            <div className="lg:col-span-2 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-6">
               Trusted by Startups • Businesses • Educational Institutions
             </div>
 
-            {/* FORM */}
-            <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-10 transition-all duration-300" >
-              {/* Glow */}
-              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-cyan-500/10" />
-              <div className="relative">
-                <h2 className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-8">
-                  Request a Free Consultation
-                </h2>
+            <div className="lg:col-start-1">
+              {/* FORM */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-10 transition-all duration-300"
+              >
+                {/* Glow */}
+                <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/10 to-cyan-500/10" />
+                <div className="relative">
+                  <h2 className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 mb-8">
+                    Request a Free Consultation
+                  </h2>
 
-                <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  Fill in your details and our team will get back to you within 24 business hours.
-                </p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-400">
+                    Fill in your details and our team will get back to you within 24 business hours.
+                  </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <input type="text" placeholder="Full Name" required
-                    value={formData.name} onChange={(e) => {
-                      const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
-                      setFormData({ ...formData, name: value })
-                    }}
-                    className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
-                  <input type="email" placeholder="Email Address" required
-                    value={formData.email} onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
-                  <input type="tel" placeholder="Phone Number" required
-                    maxLength={10} value={formData.phone} onChange={(e) => {
-                      const value = e.target.value.replace(/\D/g, "");
-                      if (value.length <= 10) {
-                        setFormData({ ...formData, phone: value });
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <input type="text" placeholder="Full Name" required
+                      value={formData.name} onChange={(e) => {
+                        const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+                        setFormData({ ...formData, name: value })
+                      }}
+                      className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
+                    <input type="email" placeholder="Email Address" required
+                      value={formData.email} onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })}
+                      className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
+                    <input type="tel" placeholder="Phone Number" required
+                      maxLength={10} value={formData.phone} onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, "");
+                        if (value.length <= 10) {
+                          setFormData({ ...formData, phone: value });
+                        }
+                      }}
+                      className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
+                    <select
+                      required
+                      value={formData.service}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          service: e.target.value,
+                        })
                       }
-                    }}
-                    className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
-                  <select
-                    required
-                    value={formData.service}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        service: e.target.value,
-                      })
-                    }
-                    className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300">
-                    <option value="" disabled>Select a Service</option>
+                      className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300"
+                    >
+                      <option value="" disabled className="text-gray-500 dark:text-gray-300">
+                        Select a Service
+                      </option>
 
-                    <option>Website Development</option>
+                      <option className="text-gray-900 dark:text-white">Website Development</option>
+                      <option className="text-gray-900 dark:text-white">Software Development</option>
+                      <option className="text-gray-900 dark:text-white">Mobile App Development</option>
+                      <option className="text-gray-900 dark:text-white">Enterprise Solutions</option>
+                      <option className="text-gray-900 dark:text-white">IOS Application Development</option>
+                      <option className="text-gray-900 dark:text-white">Cloud Solutions</option>
+                      <option className="text-gray-900 dark:text-white">Cybersecurity</option>
+                      <option className="text-gray-900 dark:text-white">AI Solutions</option>
+                      <option className="text-gray-900 dark:text-white">IT Consulting</option>
+                      <option className="text-gray-900 dark:text-white">Internship</option>
+                      <option className="text-gray-900 dark:text-white">Other</option>
 
-                    <option>Software Development</option>
-
-                    <option>Mobile App Development</option>
-
-                    <option>Enterprise Solutions</option>
-
-                    <option>IOS Application Development</option>
-
-                    <option>Cloud Solutions</option>
-
-                    <option>Cybersecurity</option>
-
-                    <option>AI Solutions</option>
-
-                    <option>IT Consulting</option>
-
-                    <option>Internship</option>
-
-                    <option>Other</option>
-
-                  </select>
-                  <textarea rows={6} placeholder="Tell us about your project..." required
-                    value={formData.message} onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value }
+                    </select>
+                    <textarea rows={6} placeholder="Tell us about your project..." required
+                      value={formData.message} onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value }
+                        )}
+                      className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
+                    <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]" disabled={loading} >
+                      {loading ? (
+                        <span className="flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]">
+                          <Loader2 className="animate-spin" size={18} />
+                          Sending...
+                        </span>
+                      ) : (
+                        "Request Consultation"
                       )}
-                    className="w-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-cyan-400 focus:outline-none transition-colors duration-300" />
-                  <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 text-lg font-semibold hover:scale-[1.02] transition duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]" disabled={loading} >
-                    {loading ? (
-                      <span className="flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]">
-                        <Loader2 className="animate-spin" size={18} />
-                        Sending...
-                      </span>
-                    ) : (
-                      "Request Consultation"
-                    )}
-                  </button>
-                </form>
-              </div>
-            </motion.div>
+                    </button>
+                  </form>
+                </div>
+              </motion.div>
+            </div>
             {/* INFO */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
