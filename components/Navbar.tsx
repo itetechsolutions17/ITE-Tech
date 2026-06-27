@@ -39,8 +39,8 @@ export default function Navbar() {
               <Image
                 src={
                   theme === "dark"
-                    ? "/projects/logo-light.png"
-                    : "/projects/logo-dark.png"
+                    ? "/projects/logo-dark.png"
+                    : "/projects/logo-light.png"
                 }
                 alt="ITE Tech Solutions"
                 width={55}
