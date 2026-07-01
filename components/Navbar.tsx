@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Projects", path: "/final-year-projects" },
     { name: "Technologies", path: "/technologies" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Internships", path: "/internship" },
@@ -33,7 +34,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-16 py-4">
 
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <div className="text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           <Link href="/">
             {mounted && (
               <Image
