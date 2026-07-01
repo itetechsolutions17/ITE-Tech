@@ -188,6 +188,7 @@ export default function Contact() {
                       <option className="text-gray-900 dark:text-white">AI Solutions</option>
                       <option className="text-gray-900 dark:text-white">IT Consulting</option>
                       <option className="text-gray-900 dark:text-white">Internship</option>
+                      <option className="text-gray-900 dark:text-white">Final Year Project</option>
                       <option className="text-gray-900 dark:text-white">Other</option>
 
                     </select>
