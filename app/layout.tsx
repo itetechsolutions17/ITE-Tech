@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "AI Solutions",
     "Cloud Solutions",
     "Cybersecurity Services",
-    "Software Maintanance and Support",
+    "Software Maintenance and Support",
     "IT Consulting Pune",
   ],
 

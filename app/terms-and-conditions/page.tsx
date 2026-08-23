@@ -1,23 +1,39 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description:
+    "Read the Terms and Conditions governing the use of ITE Tech Solutions website, digital products, and technology consulting services.",
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
+  openGraph: {
+    title: "Terms & Conditions | ITE Tech Solutions",
+    description:
+      "Read the Terms and Conditions governing the use of ITE Tech Solutions website and services.",
+    url: "https://itetechsolutions.com/terms-and-conditions",
+  },
+};
+
 export default function TermsAndConditionsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-[#0b1120] text-gray-700 dark:text-gray-300 transition-colors duration-500">
       <div className="max-w-5xl mx-auto px-6 py-20">
-
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-400 bg-clip-text text-transparent mb-6">
           Terms & Conditions
         </h1>
-      </div>
 
-      <div className="inline-flex items-center px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-500 text-sm font-medium mb-6">
+        <div className="inline-flex items-center px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-500 text-sm font-medium mb-6">
+          Legal Agreement
+        </div>
 
-        <p className="text-gray-500 dark:text-gray-400 mb-12">
+        <p className="text-gray-500 dark:text-gray-400 mb-8">
           Last Updated: June 2026
         </p>
 
         <div className="rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-8 md:p-10">
-
           <section className="space-y-8">
-            <p>
+            <p className="leading-8 text-gray-600 dark:text-gray-300">
               Welcome to ITE Tech Solutions. By accessing and using this
               website, you agree to comply with and be bound by the following
               Terms & Conditions.
@@ -27,7 +43,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 1. Acceptance of Terms
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 By accessing this website, you acknowledge that you have read,
                 understood, and agreed to these Terms & Conditions.
@@ -38,11 +53,9 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 2. Services
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 ITE Tech Solutions provides professional IT services including:
               </p>
-
               <ul className="list-disc pl-6 mt-4 space-y-3 text-gray-600 dark:text-gray-300 leading-8">
                 <li>Website Development</li>
                 <li>Software Development</li>
@@ -57,7 +70,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 3. Intellectual Property
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 All content, logos, designs, graphics, source code, and
                 materials available on this website are the property of
@@ -70,10 +82,8 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 4. User Responsibilities
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">Users agree not to:</p>
-
-              <ul className="list-disc pl-6 mt-3 space-y-2">
+              <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-600 dark:text-gray-300 leading-8">
                 <li>Use the website for unlawful purposes.</li>
                 <li>Attempt unauthorized access to systems or servers.</li>
                 <li>Distribute malware or harmful software.</li>
@@ -85,7 +95,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 5. Limitation of Liability
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 ITE Tech Solutions shall not be held responsible for any direct,
                 indirect, incidental, or consequential damages resulting from
@@ -97,7 +106,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 6. Third-Party Links
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 This website may contain links to third-party websites.
                 ITE Tech Solutions is not responsible for the content,
@@ -109,7 +117,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 7. Changes to Terms
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 We reserve the right to modify these Terms & Conditions
                 at any time without prior notice. Continued use of the
@@ -121,7 +128,6 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 8. Governing Law
               </h2>
-
               <p className="leading-8 text-gray-600 dark:text-gray-300">
                 These Terms & Conditions shall be governed and interpreted
                 in accordance with the laws of India.
@@ -137,7 +143,7 @@ export default function TermsAndConditionsPage() {
                   ITE Tech Solutions
                 </h3>
 
-                <p className="mt-2 text-gray-600 dark:text-gray-300">
+                <p className="mt-2 text-gray-600 dark:text-gray-300 leading-7">
                   Harikrishna Complex, First Floor
                   <br />
                   Main Road, Samarth Nagar
@@ -149,10 +155,10 @@ export default function TermsAndConditionsPage() {
                   Maharashtra – 411027
                 </p>
 
-                <p className="mt-2 text-gray-600 dark:text-gray-300">
+                <p className="mt-4 text-gray-600 dark:text-gray-300">
                   <a
                     href="mailto:itetechsolutions17@gmail.com"
-                    className="text-cyan-500 hover:underline"
+                    className="text-cyan-500 hover:underline break-all"
                   >
                     itetechsolutions17@gmail.com
                   </a>
@@ -174,3 +180,4 @@ export default function TermsAndConditionsPage() {
     </main>
   );
 }
+

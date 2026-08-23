@@ -1,24 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
+function useMounted() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+}
+
 export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useMounted();
 
   const toggleTheme = () => {
-    const nextTheme =
-      resolvedTheme === "dark" ? "light" : "dark";
+    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
 
-    // Chrome / Edge View Transition
-    if ((document as any).startViewTransition) {
-      (document as any).startViewTransition(() => {
+    const doc = document as Document & {
+      startViewTransition?: (callback: () => void) => void;
+    };
+
+    if (doc.startViewTransition) {
+      doc.startViewTransition(() => {
         setTheme(nextTheme);
       });
     } else {
@@ -26,7 +32,11 @@ export default function ThemeToggle() {
     }
   };
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <div className="w-11 h-11 rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 opacity-0" />
+    );
+  }
 
   return (
     <button

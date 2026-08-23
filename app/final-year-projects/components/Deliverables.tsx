@@ -76,7 +76,7 @@ export default function Deliverables() {
         </span>
 
         <h2 className="mt-6 text-4xl md:text-5xl font-bold">
-          What You'll Receive
+          What You&apos;ll Receive
         </h2>
 
         <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
