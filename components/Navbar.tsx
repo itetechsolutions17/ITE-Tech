@@ -9,7 +9,7 @@ import ThemeToggle from "./ThemeToggle";
 
 function useMounted() {
   return useSyncExternalStore(
-    () => () => {},
+    () => () => { },
     () => true,
     () => false
   );
@@ -54,8 +54,8 @@ export default function Navbar() {
           ) : (
             <div className="w-[45px] h-[45px]" />
           )}
-          <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            ITE Tech Solutions
+          <span className="text-l lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Tech Solutions
           </span>
         </Link>
 
@@ -65,20 +65,18 @@ export default function Navbar() {
             <Link
               key={item.path}
               href={item.path}
-              className={`group relative transition ${
-                pathname === item.path
-                  ? "text-blue-400"
-                  : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
-              }`}
+              className={`group relative transition ${pathname === item.path
+                ? "text-blue-400"
+                : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
+                }`}
             >
               {item.name}
 
               <span
-                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-400 transition-all duration-300 ${
-                  pathname === item.path
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                }`}
+                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-400 transition-all duration-300 ${pathname === item.path
+                  ? "w-full"
+                  : "w-0 group-hover:w-full"
+                  }`}
               />
             </Link>
           ))}
@@ -119,11 +117,10 @@ export default function Navbar() {
                 key={item.path}
                 href={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`font-medium ${
-                  pathname === item.path
-                    ? "text-blue-400"
-                    : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
-                }`}
+                className={`font-medium ${pathname === item.path
+                  ? "text-blue-400"
+                  : "text-gray-700 dark:text-gray-300 hover:text-blue-400"
+                  }`}
               >
                 {item.name}
               </Link>
