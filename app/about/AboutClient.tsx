@@ -56,7 +56,7 @@ export default function AboutClient() {
           <div className="grid md:grid-cols-3 gap-6 mt-16">
             {[
               {
-                value: "10+",
+                value: "20+",
                 label: "Technologies Used",
                 color: "text-blue-600 dark:text-blue-400",
               },
@@ -170,7 +170,7 @@ export default function AboutClient() {
                 {/* Founder Image */}
                 <div className="flex justify-center">
                   <Image
-                    src="/projects/founder.jpg"
+                    src="/projects/founder.png"
                     alt="Pushkar Bhegade - Founder & Director"
                     width={260}
                     height={260}
