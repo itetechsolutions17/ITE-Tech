@@ -22,33 +22,34 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://itetechsolutions.com"),
 
   title: {
-    default: "ITE Tech Solutions | Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
-    template: "%s | ITE Tech Solutions | Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
+    default: "ITE Tech Solutions | Digital Solutions & Software Development",
+    template: "%s | ITE Tech Solutions",
   },
 
   description:
-    "ITE Tech Solutions provides Website Development, Software Development, Mobile App Development, SEO, Digital Marketing and IT Consulting Services.",
+    "ITE Tech Solutions builds modern websites, custom software, mobile applications, AI solutions, cloud systems and cybersecurity solutions.",
 
   keywords: [
     "ITE Tech Solutions",
+    "Digital Solutions",
     "Website Development Pune",
-    "Software Development",
-    "Mobile App Development",
+    "Software Development Pune",
+    "Mobile App Development Pune",
     "SEO Services",
-    "Digital Marketing",
-    "IT Company Pune",
+    "Online Ordering System Development",
+    "AI Solutions",
+    "Cloud Solutions",
+    "Cybersecurity Services",
+    "Software Maintanance and Support",
+    "IT Consulting Pune",
   ],
-
-  alternates: {
-    canonical: "/",
-  },
 
   openGraph: {
     title: "ITE Tech Solutions",
     description:
-      "Website Development, Software Development, Mobile App Development, SEO and IT Consulting Services.",
+      "Building modern websites, software, mobile applications and digital solutions for businesses and organizations.",
     url: "https://itetechsolutions.com",
-    siteName: "ITE Tech Solutions | delivers scalable, secure and performance-driven digital solutions tailored for startups, enterprises and institutions.",
+    siteName: "ITE Tech Solutions",
     locale: "en_US",
     type: "website",
     images: [
